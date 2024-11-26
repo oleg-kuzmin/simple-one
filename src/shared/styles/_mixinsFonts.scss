@@ -1,0 +1,46 @@
+@use './vars' as *;
+
+@mixin font-main-regular($_fontSize, $_lineHeight: 1, $_letterSpacing: normal) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $mainFamily;
+  letter-spacing: $_letterSpacing;
+}
+
+@mixin font-main-semibold($_fontSize, $_lineHeight: 1, $_letterSpacing: normal) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $mainFamily;
+  letter-spacing: $_letterSpacing;
+}
+
+@mixin font-second-regular($_fontSize, $_lineHeight: 1, $_letterSpacing: normal) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $secondFamily;
+  letter-spacing: $_letterSpacing;
+}
+
+@mixin font-second-semibold($_fontSize, $_lineHeight: 1, $_letterSpacing: normal) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $secondFamily;
+  letter-spacing: $_letterSpacing;
+}
+
+@mixin font-third-regular($_fontSize, $_lineHeight: 1, $_letterSpacing: normal) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $_fontSize;
+  line-height: $_lineHeight;
+  font-family: $thirdFamily;
+  letter-spacing: $_letterSpacing;
+}

@@ -1,0 +1,12 @@
+@use 'shared/styles' as *;
+
+.FieldTitle {
+  color: $textDefault;
+  @include font-main-semibold(14px, 143%);
+
+  &__Required {
+    display: inline-block;
+    margin-right: 4px;
+    color: #b21f00;
+  }
+}

@@ -1,0 +1,5 @@
+@use 'shared/styles' as *;
+
+.ButtonBorderClose {
+  @include styles-button-border('/svg/button-border-close.svg');
+}

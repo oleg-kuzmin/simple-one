@@ -1,0 +1,13 @@
+@use 'shared/styles' as *;
+
+.SectionTitle {
+  color: $textGray;
+  text-transform: uppercase;
+  @include font-main-semibold(14px, 143%);
+
+  @include media-tablet {
+    color: $textDefault;
+    text-transform: none;
+    @include font-second-regular(20px);
+  }
+}

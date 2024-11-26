@@ -1,0 +1,1 @@
+export type Mousedown = (evt: MouseEvent) => void;

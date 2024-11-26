@@ -1,0 +1,9 @@
+@use 'shared/styles' as *;
+
+.ButtonMiniClose {
+  @include styles-button-mini(16px, 16px, '/svg/button-mini-close.svg');
+
+  &_Gray {
+    background-image: url('/svg/button-mini-close-gray.svg');
+  }
+}

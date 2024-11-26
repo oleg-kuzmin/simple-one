@@ -1,0 +1,57 @@
+@use 'shared/styles' as *;
+
+.Sidebar {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  border-right: 1px solid $borderDefault;
+
+  &_Pin {
+    position: absolute;
+    @include media-laptop {
+      position: static;
+    }
+  }
+
+  &__Top {
+    display: flex;
+    padding: 16px;
+    gap: 8px;
+    border-bottom: 1px solid $borderDefault;
+    background-color: $backgroundWhite;
+  }
+
+  &__ButtonBorderPin {
+    display: none;
+    @include media-laptop {
+      display: revert;
+    }
+  }
+
+  &__Body {
+    flex-grow: 1;
+    background-color: $backgroundField;
+  }
+}
+
+.enter {
+  transform: translateX(-120%);
+}
+
+.enterActive {
+  transform: translateX(0);
+  transition: transform $timeTranslateSidebar;
+}
+
+.exit {
+  transform: translateX(0);
+}
+
+.exitActive {
+  transform: translateX(-120%);
+  transition: transform $timeTranslateSidebar;
+}
+
+:export {
+  timeTranslateSidebar: #{$timeTranslateSidebar};
+}

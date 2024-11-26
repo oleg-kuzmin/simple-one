@@ -1,0 +1,50 @@
+@use 'shared/styles' as *;
+
+.MainSearch {
+  position: relative;
+  width: max-content;
+
+  &__Input {
+    width: 296px;
+    height: 32px;
+    padding: 5px 60px 6px 7px;
+    overflow: hidden;
+    color: $textDefault;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition:
+      background-color $timeHover,
+      width $timeHover;
+    @include font-main-regular(14px, 143%);
+    @include styles-border-default;
+    @include effect-focus-outline;
+    &::placeholder {
+      color: $textPlaceholder;
+    }
+    &:hover {
+      background-color: $backgroundHover;
+    }
+    &:focus-visible {
+      width: 310px;
+      @include media-laptop {
+        width: 370px;
+      }
+    }
+  }
+
+  &__Buttons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+  }
+
+  &__DecorateLine {
+    width: 1px;
+    height: 22px;
+    background-color: $borderDefault;
+  }
+}

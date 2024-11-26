@@ -1,0 +1,27 @@
+@use 'shared/styles' as *;
+
+.ButtonTask {
+  width: 100%;
+  max-width: 300px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: $textDefault;
+  cursor: pointer;
+  @include font-main-semibold(14px, 143%);
+  @include styles-border-default;
+  @include effect-hover-background;
+  @include effect-focus-outline;
+  @include media-tablet {
+    width: revert;
+  }
+
+  &_Accent {
+    background-color: $backgroundBlue;
+    color: $textWhite;
+    transition: opacity $timeHover;
+    &:hover {
+      background-color: $backgroundBlue;
+      opacity: 0.7;
+    }
+  }
+}

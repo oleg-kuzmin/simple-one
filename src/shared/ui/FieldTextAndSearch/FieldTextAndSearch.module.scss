@@ -1,0 +1,10 @@
+@use 'shared/styles' as *;
+
+.FieldTextAndSearch {
+  display: flex;
+  gap: 4px;
+
+  &__Input {
+    @include styles-input;
+  }
+}

@@ -1,0 +1,15 @@
+@use './vars' as *;
+
+@mixin effect-hover-background {
+  transition: background-color $timeHover;
+  &:hover {
+    background-color: $backgroundHover;
+  }
+}
+
+@mixin effect-focus-outline {
+  &:focus-visible {
+    border-radius: 4px;
+    outline-color: $borderLightBlue;
+  }
+}

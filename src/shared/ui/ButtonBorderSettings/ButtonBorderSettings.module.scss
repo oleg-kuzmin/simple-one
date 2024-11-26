@@ -1,0 +1,5 @@
+@use 'shared/styles' as *;
+
+.ButtonBorderSettings {
+  @include styles-button-border('/svg/button-border-settings.svg');
+}

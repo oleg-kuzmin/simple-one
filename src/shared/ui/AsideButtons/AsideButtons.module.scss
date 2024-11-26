@@ -1,0 +1,9 @@
+@use 'shared/styles' as *;
+
+.AsideButtons {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-right: 1px solid $borderDefault;
+  background-color: $backgroundWhite;
+}

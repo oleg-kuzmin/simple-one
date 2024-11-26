@@ -1,0 +1,32 @@
+@use 'shared/styles' as *;
+
+.UserInfo {
+  display: flex;
+  align-items: center;
+  max-width: 185px;
+  gap: 8px;
+
+  &__Avatar {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    @include media-tablet {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__Name {
+    display: none;
+    overflow: hidden;
+    color: $textDefault;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include font-main-regular(14px, 143%);
+    @include media-tablet {
+      display: revert;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use 'shared/styles' as *;
+
+.TaskTitle {
+  overflow: hidden;
+  color: $textDefault;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include font-second-semibold(20px, 120%);
+
+  @include media-tablet {
+    @include font-second-semibold(24px, 133%);
+  }
+}

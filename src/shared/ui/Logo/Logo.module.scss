@@ -1,0 +1,13 @@
+@use 'shared/styles' as *;
+
+.Logo {
+  display: inline-block;
+  width: 174px;
+  height: 24px;
+  background-image: url('/svg/logo.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0;
+  @include effect-focus-outline;
+}

@@ -1,0 +1,1 @@
+export { ButtonMiniClear } from './ButtonMiniClear';

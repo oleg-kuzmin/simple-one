@@ -1,0 +1,1 @@
+export { ButtonMiniSearch } from './ButtonMiniSearch';

@@ -1,0 +1,117 @@
+@use 'shared/styles' as *;
+
+.Overlay {
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background-color: rgba(68, 64, 63, 0.9);
+  opacity: 0;
+  scrollbar-color: $borderLightBlue rgba(255, 255, 255, 0.1);
+  scrollbar-width: thin;
+  transition:
+    opacity $timeModal,
+    visibility $timeModal;
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: $borderLightBlue;
+  }
+  &_Active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.Modal {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: $backgroundWhite;
+  @include media-tablet {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    padding: 0 16px;
+    border-bottom: 1px solid $borderDefault;
+    @include media-tablet {
+      justify-content: start;
+      min-height: 80px;
+      padding: 0 24px;
+      border-bottom: none;
+    }
+  }
+
+  &__SectionTitle {
+    @include media-tablet {
+      margin-right: auto;
+    }
+  }
+
+  &__ButtonBorderClose {
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__Save {
+    display: none;
+    @include media-tablet {
+      display: revert;
+      margin-right: 4px;
+    }
+  }
+
+  &__Cancel {
+    display: none;
+    @include media-tablet {
+      display: revert;
+    }
+  }
+
+  &__Body {
+    margin: 16px 16px 0;
+    padding-bottom: 16px;
+    @include media-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__Title {
+    margin-bottom: 16px;
+  }
+
+  &__Field {
+    margin-bottom: 16px;
+  }
+
+  &__FieldTitle {
+    margin-bottom: 8px;
+  }
+
+  &__Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @include media-tablet {
+      display: none;
+    }
+  }
+}

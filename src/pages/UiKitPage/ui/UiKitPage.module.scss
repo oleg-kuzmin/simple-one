@@ -1,0 +1,37 @@
+@use 'shared/styles' as *;
+
+.UiKitPage {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 500vh;
+  margin: 0 auto;
+  gap: 20px;
+  @include media-tablet {
+    width: 70%;
+  }
+
+  &__Title {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-decoration: underline;
+    @include font-second-semibold(24px, 1.4);
+  }
+
+  &__List {
+    margin-bottom: 10px;
+    @include font-main-regular(16px, 1.4);
+  }
+
+  &__Flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &_Column {
+      flex-direction: column;
+    }
+    @include media-tablet {
+      flex-direction: row;
+    }
+  }
+}

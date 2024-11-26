@@ -1,0 +1,9 @@
+@use 'shared/styles' as *;
+
+.ButtonBorderPin {
+  @include styles-button-border('/svg/button-border-pin-on.svg');
+
+  &_Active {
+    background-image: url('/svg/button-border-pin-off.svg');
+  }
+}

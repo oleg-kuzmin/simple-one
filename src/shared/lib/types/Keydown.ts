@@ -1,0 +1,1 @@
+export type Keydown = (evt: KeyboardEvent) => void;

@@ -1,0 +1,33 @@
+@use 'shared/styles' as *;
+
+.MenuSearch {
+  position: relative;
+  width: max-content;
+
+  &__Input {
+    width: 208px;
+    height: 32px;
+    padding: 5px 30px 6px 7px;
+    overflow: hidden;
+    color: $textDefault;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: background-color $timeHover;
+    @include font-main-regular(14px, 143%);
+    @include styles-border-default;
+    @include effect-hover-background;
+    @include effect-focus-outline;
+    &::placeholder {
+      color: $textPlaceholder;
+    }
+  }
+
+  &__Buttons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    align-items: center;
+    height: 100%;
+  }
+}

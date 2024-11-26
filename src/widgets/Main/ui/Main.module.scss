@@ -1,0 +1,93 @@
+@use 'shared/styles' as *;
+
+.Main {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  &__AsideButtons {
+    display: none;
+    @include media-tablet {
+      display: flex;
+      z-index: 3;
+      min-height: calc(100vh - 49px);
+    }
+  }
+
+  &__Sidebar {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 57px);
+    @include media-tablet {
+      left: 56px;
+      width: max-content;
+      min-height: calc(100vh - 48px);
+    }
+  }
+
+  &__Content {
+    z-index: 1;
+    flex-grow: 1;
+  }
+
+  &__Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+    @include media-tablet {
+      justify-content: start;
+      padding-bottom: 16px;
+    }
+    &_Sticky {
+      position: static;
+      @include media-tablet {
+        z-index: 2;
+        position: sticky;
+        top: 0;
+        background-color: $backgroundWhite;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+
+  &__Body {
+    margin: 0 15px;
+  }
+
+  &__Create {
+    width: 82px;
+    @include media-tablet {
+      margin: 0 auto 0 16px;
+    }
+  }
+
+  &__Save {
+    display: none;
+    @include media-tablet {
+      display: revert;
+      margin-right: 4px;
+    }
+  }
+
+  &__SaveAndExit {
+    display: none;
+    @include media-tablet {
+      display: revert;
+    }
+  }
+
+  &__Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    padding: 16px 0;
+    gap: 16px;
+    @include media-tablet {
+      display: none;
+    }
+  }
+}

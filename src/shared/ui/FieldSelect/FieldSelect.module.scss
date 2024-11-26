@@ -1,0 +1,8 @@
+@use 'shared/styles' as *;
+
+.FieldSelect {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  @include styles-input;
+}

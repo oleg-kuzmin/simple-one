@@ -1,0 +1,34 @@
+@use 'shared/styles' as *;
+
+.TaskForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  &__Title {
+    margin-bottom: 8px;
+    @include media-tablet {
+      grid-column: 1/3;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__FieldTitle {
+    margin-bottom: 8px;
+  }
+
+  &__Field {
+    overflow: hidden;
+  }
+
+  &__TwoColumns {
+    @include media-tablet {
+      grid-column: 1/3;
+    }
+  }
+}

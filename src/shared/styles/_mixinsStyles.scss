@@ -1,0 +1,52 @@
+@use './vars' as *;
+@use './mixinsEffects' as *;
+@use './mixinsFonts' as *;
+
+@mixin styles-border-default {
+  border: 1px solid $borderDefault;
+  border-radius: 4px;
+}
+
+@mixin styles-border-light-blue {
+  @include styles-border-default;
+  border-color: $borderLightBlue;
+}
+
+@mixin styles-button-mini($_width, $_height, $_image) {
+  display: flex;
+  width: $_width;
+  min-width: $_width;
+  height: $_height;
+  background-image: url($_image);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+@mixin styles-button-border($_image) {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  background-image: url($_image);
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  @include styles-border-default;
+  @include effect-hover-background;
+  @include effect-focus-outline;
+}
+
+@mixin styles-input {
+  width: 100%;
+  min-height: 32px;
+  padding: 0 6px;
+  background-color: $backgroundField;
+  color: $textDefault;
+  @include font-main-regular(14px, 143%);
+  @include styles-border-default;
+  @include effect-focus-outline;
+  @include effect-hover-background;
+}

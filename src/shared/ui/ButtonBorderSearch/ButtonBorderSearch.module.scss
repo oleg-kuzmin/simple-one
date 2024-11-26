@@ -1,0 +1,5 @@
+@use 'shared/styles' as *;
+
+.ButtonBorderSearch {
+  @include styles-button-border('/svg/button-border-search.svg');
+}

@@ -1,0 +1,13 @@
+@use 'shared/styles' as *;
+
+.FieldDateAndCalendar {
+  display: flex;
+  gap: 4px;
+
+  &__Input {
+    @include styles-input;
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+}

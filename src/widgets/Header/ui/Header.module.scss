@@ -1,0 +1,45 @@
+@use 'shared/styles' as *;
+
+.Header {
+  border-bottom: 1px solid $borderDefault;
+
+  &__Content {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    @include content;
+    @include media-tablet {
+      min-height: 47px;
+    }
+  }
+
+  &__ButtonSidebar {
+    margin-right: auto;
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__Logo {
+    display: none;
+    @include media-tablet {
+      display: inline-block;
+      margin-right: auto;
+    }
+  }
+
+  &__MainSearch {
+    display: none;
+    @include media-tablet {
+      display: revert;
+      margin-right: 16px;
+    }
+  }
+
+  &__UserInfo {
+    margin-right: 16px;
+    @include media-tablet {
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'shared/styles' as *;
+
+.ButtonFavorites {
+  width: 55px;
+  height: 56px;
+  border-radius: 4px;
+  background-image: url('/svg/button-favorites.svg');
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  @include effect-hover-background;
+  @include effect-focus-outline;
+
+  &_Active {
+    background-image: url('/svg/button-favorites-active.svg');
+  }
+}

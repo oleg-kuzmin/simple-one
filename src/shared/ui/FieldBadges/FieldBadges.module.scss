@@ -1,0 +1,23 @@
+@use 'shared/styles' as *;
+
+.FieldBadges {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 32px;
+  overflow: hidden;
+  gap: 10px;
+  @include styles-border-default;
+
+  &__Container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+    overflow: hidden;
+    gap: 4px;
+  }
+
+  &__ButtonMiniClear {
+    margin: 8px 8px 0 0;
+  }
+}

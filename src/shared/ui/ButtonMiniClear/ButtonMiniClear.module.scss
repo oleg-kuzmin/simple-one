@@ -1,0 +1,5 @@
+@use 'shared/styles' as *;
+
+.ButtonMiniClear {
+  @include styles-button-mini(16px, 16px, '/svg/button-mini-clear.svg');
+}
