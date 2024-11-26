@@ -6,7 +6,7 @@
   "homepage": "https://oleg-kuzmin.github.io/simple-one",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf dist && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
