@@ -20,7 +20,7 @@ export function Header({ activeSidebar, onClickButtonSidebar, className }: Reado
         />
         <Logo className={styles.Header__Logo} />
         <MainSearch className={styles.Header__MainSearch} />
-        <UserInfo className={styles.Header__UserInfo} title="Максим Галактионов" image="/images/user-avatar.jpg" />
+        <UserInfo className={styles.Header__UserInfo} title="Максим Галактионов" image="/simple-one/images/user-avatar.jpg" />
         <ButtonBorderSettings />
       </div>
     </header>
