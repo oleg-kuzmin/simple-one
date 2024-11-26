@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://oleg-kuzmin.github.io/simple-one",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
